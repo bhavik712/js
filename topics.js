@@ -50,3 +50,19 @@ let editObj = function(obj){
 }
 editObj(person)
 readObj(person)
+
+let x = 10
+let y = 50
+
+let rect = function (l,b){
+    return {
+        length: l,
+        width: b,
+        circumference : 2*(l+b),
+        area: l*b
+    }
+}
+
+let rectObj = rect(x,y)
+console.log(rectObj)
+console.log(rectObj.length)
