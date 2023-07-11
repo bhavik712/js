@@ -1,21 +1,21 @@
-let name = 'Bhavik'
-console.log(`Length of the name = ${name.length}`)
+const name = 'Bhavik';
+console.log(`Length of the name = ${name.length}`);
 
-let isValidPassword = function(password){
+const isValidPassword = (password)=>{
     if (password.length >=9){
         if(password.includes('password'))
         {
-            console.log(`${password} should not contain word password`)
+            console.log(`${password} should not contain word password`);
         }
         else{
-            console.log('Strong Password')
+            console.log('Strong Password');
         }
     }
     else{
-        console.log('Enter password of at least 9 characters long')
+        console.log('Enter password of at least 9 characters long');
     }
 }
 
-isValidPassword('Barad')
-isValidPassword('Barad@123')
-isValidPassword('Bhavikpassword')
+isValidPassword('Barad');
+isValidPassword('Barad@123');
+isValidPassword('Bhavikpassword');
