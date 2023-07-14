@@ -1,9 +1,9 @@
-//1.created a whatsapp chat -- array of object 
+//1.created a whatsapp chatMessages -- chatMessages of object 
 //2.added search feature -- using filter 
-//3.added another chat objject 
-//4.sorted chat array according to name
-//5.Sorted chat according to recent chat 
-const chat = [
+//3.added another chatMessages objject 
+//4.sorted chatMessages chatMessages according to name
+//5.Sorted chatMessages according to recent chatMessages 
+const chatMessages = [
     {
         name: 'Jignsa',
         message: 'Good Night',
@@ -24,19 +24,19 @@ const chat = [
     }
 ];
 
-//console.log(chat);
-const search = (array, text)=>{
-    const searchResult = array.filter((array)=>{
-        const isNameMatch = array.name.toLowerCase().includes(text);
-        const isMsgMatch = array.message.toLowerCase().includes(text);
+//console.log(chatMessages);
+const search = (chatMessages, text)=>{
+    const searchResult = chatMessages.filter((item)=>{
+        const isNameMatch = item.name.toLowerCase().includes(text);
+        const isMsgMatch = item.message.toLowerCase().includes(text);
         return isNameMatch || isMsgMatch;
     })
     return searchResult;
 }
-const showResult = search(chat, 'j');
-console.log(showResult);
+//const showResult = search(chatMessages, 'j');
+//console.log(showResult);
 
-chat.push(
+chatMessages.push(
     {
         name: 'Khushi',
         message: 'GST',
@@ -44,27 +44,22 @@ chat.push(
         time: '20:59'
     }
 )
-console.log(chat);
+//console.log(chatMessages);
 
 
-const sortChatOnName = (array) => {
-    array.sort((a,b)=>{
+const sortchatMessagesOnName = (chatMessages) => {
+    chatMessages.sort((a,b)=>{
         if(a.name.toLowerCase() < b.name.toLowerCase()){
             return -1;
         }
-        else if(b.name.toLowerCase() < a.name.toLowerCase()){
-            return 1;
-        }
-        else{
-            return 0;
-        }
+       
     })
 }
-sortChatOnName(chat);
-console.log(chat);
+sortchatMessagesOnName(chatMessages);
+console.log(chatMessages);
 
-const sortChatOnDateAndTime = (array) =>{
-    array.sort((a,b)=>{
+const sortchatMessagesOnDateAndTime = (chatMessages) =>{
+    chatMessages.sort((a,b)=>{
         if(a.date < b.date){
             return 1;
         }
@@ -89,6 +84,6 @@ const sortChatOnDateAndTime = (array) =>{
     })
 
 }
-sortChatOnDateAndTime(chat);
-console.log(chat);
+sortchatMessagesOnDateAndTime(chatMessages);
+console.log(chatMessages);
 
